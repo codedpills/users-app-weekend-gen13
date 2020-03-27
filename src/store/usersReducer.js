@@ -37,7 +37,7 @@ const usersReducer = (state = initialState, action) => {
         gen: action.payload.gen
       };
       // We update the state with new user (This is similar to setState)
-      return { ...state, users: [...initialState, newUser] };
+      return { ...state, users: [...state.users, newUser] };
     default:
       // If action matches none, return the old state
       return state;
