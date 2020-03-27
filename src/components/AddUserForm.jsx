@@ -24,7 +24,12 @@ export class AddUserForm extends Component {
       email: this.state.email,
       gen: this.state.gen
     };
-    this.props.addNewUser(newUser)
+    this.props.addNewUser(newUser);
+    this.setState({
+      name: '',
+      email: '',
+      gen: ''
+    })
   };
 
   render() {
