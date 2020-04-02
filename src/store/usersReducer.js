@@ -50,6 +50,15 @@ const usersReducer = (state = initialState, action) => {
         user => action.payload !== user.id
       );
       return { ...state, users: filteredUsers };
+    case "EDIT_USER":
+      const editedUsers = state.users.map(user => {
+        if (user.id === action.user_id) {
+          return {...user, ...action.updated_info};
+        } else {
+          return user;
+        }
+      });
+      return {...state, users: editedUsers}
     default:
       // If action matches none, return the old state
       return state;
