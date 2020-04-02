@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Router from "./Router";
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 // import createStore
 import { createStore } from "redux";
@@ -16,7 +16,7 @@ const store = createStore(usersReducer);
 ReactDOM.render(
   // Wrap our App with Provider from redux
   <Provider store={store}>
-    <App />
+    <Router />
   </Provider>,
   document.getElementById("root")
 );
