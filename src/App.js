@@ -15,6 +15,10 @@ class App extends Component {
     this.props.deleteUser(user_id);
   }
 
+  editUser = (user_id, updated_info) => {
+    this.props.editUser(user_id, updated_info);
+  }
+
   render() {
     const users = this.props.users.map((person) => {
       return (
