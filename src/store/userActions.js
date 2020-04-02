@@ -12,3 +12,11 @@ export const deleteUser = (user_id) => {
         payload: user_id
     }
 }
+
+export const editUser = (user_id, updated_info) => {
+    return {
+        type: 'EDIT_USER',
+        user_id,
+        updated_info
+    }
+}
